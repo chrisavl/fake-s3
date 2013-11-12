@@ -255,7 +255,7 @@ module FakeS3
           else
             s_req.type = Request::STORE
           end
-          s_req.object = webrick_req.path
+          s_req.object = webrick_req.path[1..-1]
         end
       end
 
